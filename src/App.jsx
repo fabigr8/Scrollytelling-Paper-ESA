@@ -151,7 +151,7 @@ function Footer() {
             </div>
           )}
         </div>
-
+        <p> <a href="https://fabigr8.github.io/impressum/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)' }}>Impressum</a> |<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)' }}>CC BY 4.0</a> </p>
         {/* Right: reserved */}
         <div />
       </div>
