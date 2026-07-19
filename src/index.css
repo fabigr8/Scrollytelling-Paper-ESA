@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #06080F;
+  --surface: #0E1220;
+  --elevated: #161B2E;
+  --border: #1E2A45;
+  --primary: #4F72FF;
+  --accent: #00D4FF;
+  --gold: #F59E0B;
+  --danger: #F87171;
+  --text: #E2E8F0;
+  --muted: #64748B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+.recharts-text {
+  fill: #94a3b8 !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.recharts-cartesian-axis-line,
+.recharts-cartesian-axis-tick-line {
+  stroke: #1E2A45 !important;
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #1E2A45 !important;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none !important;
+}
