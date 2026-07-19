@@ -98,33 +98,53 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-12">
+        {/* Scrollytelling badge */}
+        <motion.div
+          className="inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest"
+          style={{
+            border: '1px solid var(--primary)',
+            color: 'var(--primary)',
+            backgroundColor: 'rgba(79,114,255,0.08)',
+          }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+        >
+          <span style={{
+            display: 'inline-block', width: 6, height: 6, borderRadius: '50%',
+            backgroundColor: 'var(--primary)',
+          }} />
+          Interactive Scrollytelling Paper
+        </motion.div>
+
         <motion.p
           className="text-xs uppercase tracking-widest mb-6 font-medium"
-          style={{ color: 'var(--primary)' }}
+          style={{ color: 'var(--muted)' }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          A Data Story · Gwinner, Tomitza & Winkelmann, 2024
+          Decision Support Systems &nbsp;·&nbsp; Gwinner, Tomitza &amp; Winkelmann, 2024
         </motion.p>
 
         <motion.h1
-          className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight mb-6"
+          className="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6"
           style={{ color: 'var(--text)' }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.4 }}
         >
-          When AI explains{' '}
+          When AI is {' '}
           <span style={{
             background: 'linear-gradient(135deg, var(--primary), var(--accent))',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}>
-            itself,
+          
+          explained. <br />
           </span>
-          <br />
-          can you trust the story?
+
+          Can you trust the story?
         </motion.h1>
 
         <motion.p
@@ -140,11 +160,29 @@ export default function Hero() {
           we measure when they drift?
         </motion.p>
 
+        {/* Citation block */}
+        <motion.div
+          className="mb-10 px-4 py-3 rounded-lg text-xs leading-relaxed"
+          style={{
+            backgroundColor: 'var(--elevated)',
+            border: '1px solid var(--border)',
+            color: 'var(--muted)',
+            maxWidth: '38rem',
+          }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+        >
+          <span style={{ color: 'var(--text)', fontWeight: 600 }}>Cite: </span>
+          Gwinner, F., Tomitza, M., &amp; Winkelmann, R. (2024). Comparing expert systems and their explainability through similarity.
+          {' '}<em>Decision Support Systems</em>, 182, 114248.
+        </motion.div>
+
         <motion.div
           className="flex flex-wrap gap-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
         >
           {['XAI', 'Representational Similarity Analysis', 'Explanation Drift', 'MLOps'].map(tag => (
             <span
@@ -168,7 +206,7 @@ export default function Hero() {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
+        transition={{ delay: 1.7, duration: 0.8 }}
       >
         <motion.div
           className="flex items-center gap-2 pl-5 pr-4 py-2.5 rounded-full cursor-pointer select-none"
